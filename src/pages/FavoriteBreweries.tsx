@@ -5,30 +5,16 @@ import { observer } from "mobx-react";
 import { useNavigate } from "react-router-dom";
 import { PAGES } from "../config/config";
 import Unlike from "../components/Unlike";
+import { styles } from "./style/favoriteBreweriesStyle";
 
 const FavoriteBreweries = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ height: "90%" }}>
+    <Box sx={styles.mainBox}>
       {breweryStore.favoriteBreweries.length === 0 ? (
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: 10,
-          }}
-        >
-          <Typography
-            sx={{
-              fontSize: "1.5rem",
-              fontWeight: "bold",
-              margin: 2,
-              color: "red",
-            }}
-          >
+        <Box sx={styles.secBox}>
+          <Typography sx={styles.propTypography}>
             No favorite breweries
           </Typography>
           <Button
@@ -43,20 +29,13 @@ const FavoriteBreweries = () => {
         </Box>
       ) : (
         <>
-          <Box sx={{ overflow: "auto", maxHeight: "85%" }}>
+          <Box sx={styles.brweryResult}>
             <BreweriesList
               breweries={breweryStore.favoriteBreweries}
               showRating={true}
             />
           </Box>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              gap: 2,
-              margin: 2,
-            }}
-          >
+          <Box sx={styles.unlikeBox}>
             <Unlike />
           </Box>
         </>

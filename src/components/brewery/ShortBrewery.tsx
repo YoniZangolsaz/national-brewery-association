@@ -18,12 +18,12 @@ const ShortBrewery = ({ brewery, showRating }: shortBreweryProps) => {
     <>
       <Paper elevation={5} onClick={() => setOpen(true)} sx={styles.mainBox}>
         <Box sx={styles.secBox}>
-          <Typography sx={styles.typography}>name:</Typography>
-          <Typography>{brewery.name}</Typography>
+          <Typography sx={styles.propTypography}>name:</Typography>
+          <Typography sx={styles.textResult}>{brewery.name}</Typography>
         </Box>
         <Box sx={styles.secBox}>
-          <Typography sx={styles.typography}>type:</Typography>
-          <Typography>{brewery.brewery_type}</Typography>
+          <Typography sx={styles.propTypography}>type:</Typography>
+          <Typography sx={styles.textResult}>{brewery.brewery_type}</Typography>
         </Box>
         <Box sx={styles.favoriteBox}>
           <AddToFavorite brewery={brewery} />

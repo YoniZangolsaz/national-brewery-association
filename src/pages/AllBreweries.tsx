@@ -8,6 +8,7 @@ import SearchBar from "../components/search/SearchBar";
 import { getByPage, searchByFilter } from "../api/brewery.api";
 import Loading from "../components/Loading";
 import snackStore from "../stroe/snack.store";
+import { styles } from "./style/allBreweriesStyle";
 
 const AllBreweries = () => {
   const [breweries, setBreweries] = useState<BreweryType[]>([]);
@@ -45,43 +46,23 @@ const AllBreweries = () => {
   }, [searchStore.page, searchStore.searchValue, searchStore.searchType]);
 
   return (
-    <Box
-      sx={{
-        height: "90%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "space-evenly",
-      }}
-    >
+    <Box sx={styles.mainBox}>
       {loading ? (
-        <Box sx={{ display: "grid", placeItems: "center", marginTop: "30vh" }}>
+        <Box sx={styles.loadBox}>
           <Loading />
         </Box>
       ) : (
         <>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              gap: 2,
-              margin: 2,
-            }}
-          >
+          <Box sx={styles.searchBox}>
             <SearchBar />
           </Box>
           {!breweries.length ? (
-            <Box
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                height: "75%",
-              }}
-            >
+            <Box sx={styles.textBox}>
               <Typography variant="h2">No breweries found</Typography>
             </Box>
           ) : (
             <>
-              <Box sx={{ overflow: "auto", height: "75%" }}>
+              <Box sx={styles.breweryList}>
                 <BreweriesList breweries={breweries} showRating={false} />
               </Box>
               <Pagination />

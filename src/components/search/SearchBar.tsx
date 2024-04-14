@@ -54,7 +54,6 @@ const SearchBar = () => {
           <Button
             variant="contained"
             color="primary"
-            sx={styles.button}
             onClick={() => handleSearchClick()}
           >
             search
@@ -62,7 +61,6 @@ const SearchBar = () => {
           <Button
             variant="contained"
             color="secondary"
-            sx={styles.button}
             onClick={() => {
               setSearchValue("");
               setSelectType(undefined);

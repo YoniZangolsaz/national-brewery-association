@@ -2,6 +2,7 @@ export const styles = {
   mainBox: {
     display: "flex",
     flexDirection: "column",
+    justifyContent: "space-evenly",
     gap: 2,
     border: "1px solid black",
     borderRadius: 2,
@@ -17,7 +18,12 @@ export const styles = {
     display: "flex",
     width: "30%",
   },
-  typography: {
+  propTypography: {
     fontWeight: "bold",
+    fontSize: "1.2rem",
+    mr: 1,
+  },
+  textResult: {
+    fontSize: "1.2rem",
   },
 };

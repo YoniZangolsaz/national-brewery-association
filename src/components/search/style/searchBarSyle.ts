@@ -7,9 +7,6 @@ export const styles = {
     display: "flex",
     alignItems: "center",
   },
-  button: {
-    height: "4vh",
-  },
   mainTypography: {
     fontWeight: "bold",
     fontSize: "1.5rem",

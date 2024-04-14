@@ -4,5 +4,6 @@ export const styles = {
     justifyContent: "center",
     gap: 2,
     padding: 2,
+    flexWrap: "wrap",
   },
 };
