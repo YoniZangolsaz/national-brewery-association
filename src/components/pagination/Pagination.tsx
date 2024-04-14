@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import PaginationButton from "./PaginationButton";
-import { styles } from "./style/pagimationStyle";
+import { styles } from "./style/paginationStyle";
 
 const Pagination = () => {
   return (
