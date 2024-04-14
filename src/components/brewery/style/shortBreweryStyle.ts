@@ -21,6 +21,7 @@ export const styles = {
   propTypography: {
     fontWeight: "bold",
     fontSize: "1.2rem",
+    textTransform: "capitalize",
     mr: 1,
   },
   textResult: {
